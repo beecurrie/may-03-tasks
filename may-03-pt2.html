@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <p>Start</p>
+    <button>Click</button>
+
+<script>
+
+//:Logic Variables
+  var isTrue = true;
+  var isFalse = false;
+  var falseText = 'false';
+  var trueText = 'true';
+  var myName = 'Bee';
+  var aNum = 7;
+  var bNum = 13;
+  var zeroNum = '0';
+  var arr = [];
+  var getButton = document.querySelector('button');
+  console.log(getButton);
+
+  // getButton.onclick = function () {
+  //   console.log('clicked...');
+  //   if (isTrue) {
+  //     makeTrue();
+  //   } else {
+  //     makeFalse();
+  //   }
+  // }
+  //
+  //
+  //
+  // function makeFalse () {
+  //   var para = document.querySelector('p');
+  //   para.textContent = 'False';
+  //   console.log(para);
+  // };
+  //
+  //
+  // function makeTrue () {
+  //   var para = document.querySelector('p');
+  //   para.textContent = 'True';
+  //   console.log(para);
+  // };
+
+  var q1 = prompt("How old am I?");
+
+  if (q1 === '21') {
+    console.log('3 points - Correct Age');
+    var q2 = prompt("What is my name?");
+  } else {
+    console.log('Wrong' + ' 0 Points - Incorrect Age');
+    var q2 = prompt("What is my name?");
+  }
+
+  if (q2 === 'Bee') {
+      console.log('3 points - Correct Name');
+      var q3 = prompt("What is my cats name?");
+  } else {
+      console.log('Wrong' + ' 0 Points - Incorrect Name');
+      var q3 = prompt("What is my cats name?");
+  }
+
+  if (q3 === 'Indie') {
+      console.log('3 points - Correct Cat Name');
+      var q4 = prompt("What month is my birthday?");
+  } else {
+      console.log('Wrong' + ' 0 Points - Incorrect Cat Name');
+      var q4 = prompt("What month is my birthday?");
+  }
+
+  if (q4 === 'November') {
+      console.log('3 points - Correct Birth Month');
+      var q5 = prompt("What do I study?");
+  } else {
+    console.log('Wrong' + ' 0 Points - Incorrect Birth Month');
+    var q5 = prompt("What do I study?");
+  }
+
+  if (q5 === 'Web Design') {
+      console.log('3 points - Correct Study');
+  } else {
+    console.log('Wrong' + ' 0 Points - Incorrect Study');
+  }
+
+
+
+// Conditional Statement
+  // if (aNum === 6) {
+  //   // If the variable is true go do this code ------>
+  //   alert ('This is the number');
+  //   // If the variable is false go do this code ------>
+  // } else {
+  //   alert ('This is not the number')
+  // }
+  // -----------
+  // if (arr === true) {
+  //   alert ('truth here')
+  // }
+  // -----------
+  // if (zeroNum) {
+  //   alert ('this is the truth')
+  // } else {
+  //   alert ('this is not the truth')
+  // }
+
+
+
+</script>
+</body>
+</html>

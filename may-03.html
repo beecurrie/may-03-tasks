@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>May 3rd Work</title>
+  <style>
+
+    h1 {
+      color: blue;
+    }
+
+
+    p {
+      color: aqua;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="hotel">
+    <h1></h1>
+  </div>
+
+
+
+</body>
+<script>
+
+// Object
+var peppersHotel = {
+  name: 'Peppers Soul Hotel',
+  location: 'Surfers Paradise',
+  freeWifi: true,
+  // Nested Array
+  attractions: {
+    close: ['Ripley\'s Believe it or Not', 'Infinity Maze', 'Skypoint Observation Deck'],
+    afar: ['Dreamworld', 'Warner Bros Movie World', 'Wet\'n\'Wild Water World'],
+  },
+  // Array within an Array (Selected with multiple [] i.e Which element in the original Array is selected>[1][1]<What in the specified Array is selected)
+  miniBar: [
+    ['dear olivia', 'a midsummer\'s night\'s dream', 'piha-garita'],
+    ['negroni', 'old fashioned'],
+    ['stella artois', 'panhead supercharger apa']
+  ],
+  publicTransit: 'Trains',
+  updateDom: function () { // < This is a method (A method is a function within an object)
+    var getHeader = document.querySelector('h1'); //Selects the h1 element
+    getHeader.textContent = peppersHotel.name; // Places 'name' from variable into h1 element
+    var getDrink = document.createElement('h3');
+    console.dir(getDrink)
+    getDrink.id = 'drinkId'
+    getDrink.textContent = peppersHotel.miniBar [2][1];
+    document.body.appendChild(getDrink);
+    var getAttraction = document.createElement('p'); // Creates a p element
+    getAttraction.textContent = peppersHotel.attractions.close [0]; // Places the close attraction from the array in the element into the paragraph
+    document.body.appendChild(getAttraction); // Puts the created paragraph into the body of the document
+    console.dir(document.getElementById('drinkId'));
+    drinkId.style.color = "#d64c51";
+  },
+  };
+
+  console.log('%cHello there!', `
+  background: white;
+  border: 3px solid red;
+  color: red;
+  font-size: 50px;
+  margin: 40px;
+  padding: 20px;
+`);
+
+
+
+  // This is a function, a function is a method outside of an object --------->
+  // function updateDom (){
+  //   var getHeader = document.querySelector('h1'); //Selects the h1 element
+  //   getHeader.textContent = peppersHotel.name; // Places 'name' from variable into h1 element
+  //   var getAttraction = document.createElement('p'); // Creates a p element
+  //   getAttraction.textContent = peppersHotel.attractions.close [0]; // Places the close attraction from the array in the element into the paragraph
+  //   document.body.appendChild(getAttraction); // Puts the created paragraph into the body of the document
+  // };
+
+ peppersHotel.updateDom();
+
+</script>
+</html>
